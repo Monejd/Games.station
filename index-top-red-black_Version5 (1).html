@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Mobile Games Download | Free Android & iOS Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download the top mobile games for Android and iOS! Fresh, safe, and free. Enjoy action, puzzle, and strategy games.">
+  <meta name="keywords" content="top mobile games, android games, ios games, free games, download games">
+  <meta name="author" content="YourBrand">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --color-bg: #0e0e13;
+      --color-card: #19191f;
+      --color-accent1: #ff2b47;
+      --color-accent2: #ff002f;
+      --color-accent3: #ffb300;
+      --color-footer: #18181c;
+      --radius: 22px;
+      --card-radius: 16px;
+      --shadow: 0 8px 40px 0 rgba(255,43,71,0.08), 0 2px 14px rgba(0,0,0,0.35);
+      --glass: rgba(255,255,255,0.02);
+      --text-main: #f7f7fa;
+      --text-muted: #d3bfc5;
+      --transition: 0.25s cubic-bezier(.25,.46,.45,.94);
+      --gradient-btn: linear-gradient(90deg, #ff2b47, #ff002f 90%);
+      --gradient-btn-hover: linear-gradient(270deg, #ff002f, #ff2b47 90%);
+      --modal-bg: rgba(0,0,0,0.85);
+      --modal-card: #2c1a1f;
+      --modal-btn: #ff2b47;
+      --modal-btn-hover: #ff002f;
+    }
+    html { scroll-behavior: smooth;}
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, var(--color-bg) 65%, #15151b 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(90deg, var(--color-accent1) 0%, var(--color-accent2) 80%);
+      padding: 2.3rem 0 1.3rem 0;
+      text-align: center;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 2;
+      animation: dropDown .8s;
+      overflow: hidden;
+    }
+    @keyframes dropDown {
+      0% {opacity: 0; transform: translateY(-60px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -60px;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 120px;
+      background: radial-gradient(circle at 50% 0%, #fff2 0%, transparent 70%);
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(8px);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--color-bg);
+      letter-spacing: 1.5px;
+      text-shadow: 0 4px 28px rgba(0,0,0,0.09);
+      font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    }
+    header p {
+      color: var(--color-footer);
+      margin: 0.85rem 0 0 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    .hero-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0 0 0;
+      flex-wrap: wrap;
+      opacity: 0.97;
+    }
+    .hero-strip span {
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      padding: 0.39rem 1.2rem;
+      font-size: 1.04rem;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+      margin: 0.1rem 0;
+      border: 1px solid rgba(255,43,71,0.18);
+      backdrop-filter: blur(2.5px);
+    }
+    .hero-strip .safe { 
+      color: #00e676; 
+      background: rgba(0,230,118,0.08); 
+      border-color: #00e67640;
+    }
+    .hero-strip .noreg { 
+      color: #ffb300; 
+      background: rgba(255,179,0,0.09); 
+      border-color: #ffb30033;
+    }
+    .hero-strip .trending { 
+      color: #29b6f6; 
+      background: rgba(41,182,246,0.09); 
+      border-color: #29b6f633;
+    }
+    .hero-strip .fast { 
+      color: #e040fb; 
+      background: rgba(224,64,251,0.09); 
+      border-color: #e040fb33;
+    }
+    main {
+      flex: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.6rem 1.2rem 1.7rem 1.2rem;
+    }
+    .games-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.1rem 1.3rem;
+      margin-top: 2.7rem;
+      animation: fadeIn 1s;
+    }
+    @media (min-width: 900px) {
+      .games-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      main { padding: 1.2rem 0.3rem; }
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .game-block {
+      background: linear-gradient(135deg, var(--color-card) 85%, var(--glass) 100%);
+      border-radius: var(--card-radius);
+      box-shadow: 0 2px 26px 0 rgba(255,43,71,0.11), 0 1.5px 4px 0 #0007;
+      padding: 1.4rem 1rem 1.8rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      animation: cardPulse 1.2s;
+      isolation: isolate;
+      border: 1.5px solid rgba(255,43,71,0.12);
+    }
+    .game-block::before {
+      content: "";
+      position: absolute;
+      top: -45px; left: -45px;
+      width: 110px; height: 110px;
+      background: radial-gradient(circle, var(--color-accent2) 0%, transparent 80%);
+      opacity: 0.08;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .game-block:hover, .game-block:focus-within {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 14px 54px 0 rgba(255,43,71,0.25), 0 2px 22px 0 rgba(0,0,0,0.18);
+      z-index: 4;
+      border-color: var(--color-accent1);
+    }
+    @keyframes cardPulse {
+      0% {transform: scale(0.8);}
+      80% {transform: scale(1.05);}
+      100% {transform: scale(1);}
+    }
+    .game-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 15px;
+      object-fit: cover;
+      background: #fff;
+      border: 3px solid var(--color-accent1);
+      margin-bottom: 1.1rem;
+      box-shadow: 0 2px 14px rgba(255,43,71,0.13);
+      animation: imgPop 1s cubic-bezier(.4,2,.3,1);
+      z-index: 1;
+      filter: drop-shadow(0 3px 10px #ff2b4720);
+    }
+    @keyframes imgPop {
+      0% {transform: scale(0.7);}
+      80% {transform: scale(1.10);}
+      100% {transform: scale(1);}
+    }
+    .game-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--color-accent1);
+      margin: 0.15rem 0;
+      text-align: center;
+      letter-spacing: 0.19px;
+      z-index: 1;
+      text-shadow: 0 2px 10px #0005;
+    }
+    .game-desc {
+      font-size: 1.04rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      text-align: center;
+      min-height: 48px;
+      z-index: 1;
+    }
+    .dl-btn {
+      background: var(--gradient-btn);
+      color: var(--color-bg);
+      border: none;
+      border-radius: 13px;
+      padding: 0.8rem 1.6rem;
+      font-size: 1.13rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: auto;
+      box-shadow: 0 4px 18px rgba(255,43,71,0.13);
+      transition: background 0.19s, transform 0.13s, box-shadow .21s;
+      outline: none;
+      animation: btnAnim 1.4s;
+      z-index: 1;
+      letter-spacing: 0.6px;
+      position: relative;
+      overflow: hidden;
+    }
+    .dl-btn::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      border-radius: 13px;
+      background: linear-gradient(120deg, #fff6 0%, transparent 60%);
+      opacity: 0.10;
+      pointer-events: none;
+      transition: opacity .18s;
+    }
+    .dl-btn:hover::after, .dl-btn:focus::after {
+      opacity: 0.22;
+    }
+    .dl-btn:hover, .dl-btn:focus {
+      background: var(--gradient-btn-hover);
+      transform: scale(1.09);
+      box-shadow: 0 8px 32px 0 #ff2b4744, 0 2px 22px 0 #ff002f33;
+    }
+    @keyframes btnAnim {
+      from {opacity: 0; transform: scale(0.85);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    .game-block:nth-child(odd) .dl-btn {
+      animation: attract 1.6s 1s infinite alternate;
+    }
+    @keyframes attract {
+      0% {box-shadow: 0 0 0 0 rgba(255,43,71,0.10);}
+      100% {box-shadow: 0 0 22px 5px rgba(255,43,71,0.21);}
+    }
+    /* Modal Styles */
+    .modal-bg {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;top: 0;right: 0;bottom: 0;
+      width: 100vw; height: 100vh;
+      background: var(--modal-bg);
+      justify-content: center;
+      align-items: center;
+      transition: opacity .22s;
+    }
+    .modal-bg.active {
+      display: flex;
+    }
+    .modal-card {
+      background: var(--modal-card);
+      color: #ffdbe0;
+      border-radius: 18px;
+      padding: 2rem 1.5rem 1.6rem 1.5rem;
+      min-width: 240px;
+      box-shadow: 0 8px 48px rgba(255,43,71,0.13), 0 2px 18px #0007;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInModal .36s;
+      position: relative;
+    }
+    @keyframes fadeInModal {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .modal-card h3 {
+      margin: 0 0 1.2rem 0;
+      font-size: 1.35rem;
+      color: #ff2b47;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+    .modal-btns {
+      display: flex;
+      gap: 1.1rem;
+      margin-bottom: 0.8rem;
+      margin-top: 0.2rem;
+    }
+    .modal-btn {
+      outline: none;
+      border: none;
+      padding: 0.7rem 1.45rem;
+      border-radius: 11px;
+      background: var(--gradient-btn);
+      color: #fff;
+      font-size: 1.07rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .18s, transform .13s;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(255,43,71,0.13);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .modal-btn:hover,
+    .modal-btn:focus {
+      background: var(--gradient-btn-hover);
+      transform: scale(1.06);
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px; right: 14px;
+      background: none;
+      border: none;
+      color: #ff2b47;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: color .15s;
+    }
+    .modal-close:hover {
+      color: #ffb300;
+    }
+    @media (max-width: 480px) {
+      .modal-card { padding: 1rem 0.4rem 1.1rem 0.4rem;}
+    }
+    footer {
+      background: var(--color-footer);
+      color: #e7c9cf;
+      text-align: center;
+      padding: 1.18rem 0 0.7rem 0;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      box-shadow: var(--shadow);
+      font-size: 1.1rem;
+      letter-spacing: 0.7px;
+      margin-top: auto;
+      animation: upFade 1s;
+      backdrop-filter: blur(3.2px);
+    }
+    @keyframes upFade {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .footer-links {
+      margin-top: 0.4rem;
+    }
+    .footer-links a {
+      color: var(--color-accent1);
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: 600;
+      transition: color 0.16s;
+      opacity: 0.88;
+    }
+    .footer-links a:hover {
+      color: var(--color-accent3);
+      opacity: 1;
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 2.05rem;}
+      main { padding: 1rem 0.1rem;}
+      .hero-strip { gap: 0.5rem; }
+      .footer-links { font-size: .98rem;}
+    }
+  </style>
+  <script>
+    function showModal(gameTitle) {
+      document.getElementById('modal-game-name').textContent = gameTitle;
+      document.getElementById('download-modal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('download-modal').classList.remove('active');
+    }
+    // Replace these with your actual download handlers if you want per-game logic
+    function downloadFor(platform) {
+      closeModal();
+      // Here you can trigger your download logic, for now just alert
+      alert("Starting download for " + platform + "!");
+      // _KB()  // You can call your function here if needed
+    }
+    // Keyboard ESC support
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") closeModal();
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Top Mobile Games Download</h1>
+    <p>Experience the hottest free mobile games for Android & iOS. Download and play instantly!</p>
+    <div class="hero-strip">
+      <span class="safe">🔥 100% Safe Download</span>
+      <span class="noreg">🔥 No Registration</span>
+      <span class="trending">🔥 Trending & New Games</span>
+      <span class="fast">🔥 Fast & Secure</span>
+    </div>
+  </header>
+  <main>
+    <section aria-label="Top Mobile Games">
+      <h2 style="position:absolute;left:-9999px;">Mobile Games Collection</h2>
+      <div class="games-list">
+        <!-- GAME 1 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80"
+            alt="Space Quest Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">GTA</div>
+          <div class="game-desc">Blast off into space and conquer new planets in this top action adventure.</div>
+          <button class="dl-btn" onclick="showModal('GTA')">Download</button>
+        </div>
+        <!-- GAME 2 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+            alt="Color Pop Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Color Pop</div>
+          <div class="game-desc">Match colorful tiles and unlock levels packed with vibrant surprises!</div>
+          <button class="dl-btn" onclick="showModal('Color Pop')">Download</button>
+        </div>
+        <!-- GAME 3 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+            alt="Neon Dash Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Neon Dash</div>
+          <div class="game-desc">Dash through neon-lit worlds, avoid obstacles, and beat the high score!</div>
+          <button class="dl-btn" onclick="showModal('Neon Dash')">Download</button>
+        </div>
+        <!-- GAME 4 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80"
+            alt="Mystic Forest Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Mystic Forest</div>
+          <div class="game-desc">Explore an enchanted forest, solve puzzles, and discover magical secrets.</div>
+          <button class="dl-btn" onclick="showModal('Mystic Forest')">Download</button>
+        </div>
+        <!-- GAME 5 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+            alt="Cyber Soccer Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Cyber Soccer</div>
+          <div class="game-desc">Join cybernetic teams in futuristic soccer matches—score the top goals!</div>
+          <button class="dl-btn" onclick="showModal('Cyber Soccer')">Download</button>
+        </div>
+        <!-- GAME 6 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+            alt="Frozen Candy Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Frozen Candy</div>
+          <div class="game-desc">Slide, match, and pop frozen candies in this top puzzle game!</div>
+          <button class="dl-btn" onclick="showModal('Frozen Candy')">Download</button>
+        </div>
+        <!-- GAME 7 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1468453904700-54e4fabd13bb?auto=format&fit=crop&w=400&q=80"
+            alt="Shadow Ninja Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Shadow Ninja</div>
+          <div class="game-desc">Stealth and skill! Become the ultimate ninja in neon-shadowed arenas.</div>
+          <button class="dl-btn" onclick="showModal('Shadow Ninja')">Download</button>
+        </div>
+        <!-- GAME 8 -->
+        <div class="game-block" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?auto=format&fit=crop&w=400&q=80"
+            alt="Retro Wave Game Icon" class="game-img" loading="lazy">
+          <div class="game-title">Retro Wave</div>
+          <div class="game-desc">Dive into retro synthwave vibes—arcade nostalgia with a modern twist!</div>
+          <button class="dl-btn" onclick="showModal('Retro Wave')">Download</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Modal -->
+  <div class="modal-bg" id="download-modal" tabindex="-1">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+      <h3>Choose your platform<br><span id="modal-game-name"></span></h3>
+      <div class="modal-btns">
+        <button class="modal-btn" onclick="downloadFor('Android')" aria-label="Download for Android">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png" alt="Android" style="width:22px;height:22px;vertical-align:middle;"> Android
+        </button>
+        <button class="modal-btn" onclick="downloadFor('iPhone')" aria-label="Download for iPhone">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iPhone" style="width:22px;height:22px;vertical-align:middle;"> iPhone
+        </button>
+      </div>
+      <div style="font-size:.93rem;color:#ffdbe0;opacity:.86;">Select your device to start the download.</div>
+    </div>
+  </div>
+  <footer>
+    <div>© 2025 Top Mobile Games. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#" rel="nofollow">Privacy Policy</a> |
+      <a href="#" rel="nofollow">Terms of Service</a> |
+      <a href="#" rel="nofollow">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
